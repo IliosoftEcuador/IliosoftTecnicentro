@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software de Gestión para Lubricadoras y Tecnicentros en Quevedo</title>
+    <title>Iliosoft Tecnicentro - Software para Lubricadoras y Talleres</title>
     <style>
         :root {
             --primary: #1e3a8a;
             --secondary: #2563eb;
             --accent: #f59e0b;
+            --danger: #dc2626;
             --dark: #1f2937;
             --light: #f3f4f6;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
-        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-align: center; padding: 3rem 1rem; }
-        header h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.1rem; opacity: 0.9; max-width: 700px; margin: 0 auto; }
-        .badge { background-color: var(--accent); color: #000; padding: 0.3rem 0.8rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem; display: inline-block; margin-bottom: 1rem; }
-        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
-        .section-title { text-align: center; margin-bottom: 2rem; color: var(--primary); }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; text-align: center; padding: 3.5rem 1rem; }
+        header h1 { font-size: 2.2rem; margin-bottom: 0.8rem; }
+        header p { font-size: 1.15rem; opacity: 0.95; max-width: 750px; margin: 0 auto; }
+        .badge { background-color: var(--accent); color: #000; padding: 0.35rem 1rem; border-radius: 20px; font-weight: bold; font-size: 0.9rem; display: inline-block; margin-bottom: 1rem; }
+        .container { max-width: 1000px; margin: 2.5rem auto; padding: 0 1rem; }
+        .section-title { text-align: center; margin-bottom: 2rem; color: var(--primary); font-size: 1.7rem; }
         
-        /* Estilos para el video */
-        .video-container { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 3rem; text-align: center; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; border-radius: 6px; margin-top: 1rem; }
-        .video-wrapper iframe, .video-wrapper video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        /* Sección de Dolores */
+        .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3.5rem; }
+        .pain-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid var(--danger); }
+        .pain-card h3 { color: var(--danger); margin-bottom: 0.5rem; font-size: 1.15rem; }
+        .pain-card p { font-size: 0.95rem; color: #4b5563; }
 
+        /* Sección de Soluciones / Módulos */
         .modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
         .module-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); }
         .module-card h3 { color: var(--primary); margin-bottom: 0.5rem; font-size: 1.2rem; }
         .module-card p { font-size: 0.95rem; color: #4b5563; }
         
-        .cta-box { background: white; text-align: center; padding: 2.5rem; border-radius: 8px; margin-top: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .cta-btn { display: inline-block; background-color: #25d366; color: white; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.1rem; margin-top: 1rem; transition: background 0.3s; }
+        .cta-box { background: white; text-align: center; padding: 2.5rem; border-radius: 8px; margin-top: 3.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.08); }
+        .cta-btn { display: inline-block; background-color: #25d366; color: white; padding: 0.9rem 2.2rem; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1.15rem; margin-top: 1.2rem; transition: background 0.3s; }
         .cta-btn:hover { background-color: #20ba5a; }
         footer { text-align: center; padding: 1.5rem; color: #6b7280; font-size: 0.85rem; margin-top: 2rem; }
     </style>
@@ -40,67 +43,58 @@
 <body>
 
     <header>
-        <span class="badge">Desde Quevedo para todo el Ecuador • 8 Años de Éxito</span>
-        <h1>Software de Gestión para Lubricadoras y Tecnicentros</h1>
-        <p>El sistema de escritorio definitivo, rápido y sin depender de internet para controlar tu taller al 100%.</p>
+        <span class="badge">Iliosoft Tecnicentro • 8 Años en Operación Real</span>
+        <h1>Control de Bodega y Facturación Sin Enredos</h1>
+        <p>Software de escritorio robusto y veloz para lubricadoras y talleres que exigen precisión exacta en inventario y mostrador.</p>
     </header>
 
     <div class="container">
-
-        <!-- SECCIÓN DEL VIDEO DEMOSTRATIVO -->
-        <div class="video-container">
-            <h2 class="section-title" style="margin-bottom: 0.5rem;">Mira el Sistema en Acción</h2>
-            <p style="color: #4b5563; margin-bottom: 1rem;">Descubre la velocidad con la que puedes buscar por placa, facturar y controlar tu bodega.</p>
-            <div class="video-wrapper">
-                <!-- Aquí puedes colocar tu video subido a YouTube, Facebook o un archivo MP4 local -->
-                <iframe src="https://www.youtube.com/embed/TU_VIDEO_ID" allowfullscreen></iframe>
+        
+        <h2 class="section-title">¿Cansado del desorden en el taller?</h2>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <h3>Inventario que no cuadra</h3>
+                <p>No saber exactamente cuántos galones, aceites o filtros quedan en bodega genera mermas invisibles y dinero perdido.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Clientes que se van</h3>
+                <p>Olvidar el kilometraje y la fecha del último cambio de aceite por placa significa regalar tus clientes recurrentes a la competencia.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Sistemas web lentos o caídos</h3>
+                <p>Depender de internet para facturar cuando hay filas de autos esperando en el taller es un riesgo que no puedes permitirte.</p>
             </div>
         </div>
 
-        <h2 class="section-title">Módulos Esenciales del Sistema</h2>
-        
+        <h2 class="section-title">Módulos Reales para Operación Real</h2>
         <div class="modules-grid">
             <div class="module-card">
-                <h3>Ventas y Facturación</h3>
-                <p>Emisión rápida de comprobantes y control absoluto de las transacciones de mostrador en segundos[cite: 2].</p>
+                <h3>Bodega con Filtros por Clase y Marca</h3>
+                <p>Organiza tu stock por categorías (Lubricantes, Hidráulicos[cite: 9], etc.) y marcas. Controla ingresos, ítems, precios y kardex al instante[cite: 9].</p>
             </div>
-            
             <div class="module-card">
-                <h3>Control de Bodega</h3>
-                <p>Gestión exacta de inventarios de aceites, lubricantes, filtros y repuestos sin margen de error[cite: 2].</p>
+                <h3>Facturación y Placas Ágiles</h3>
+                <p>Registra la venta en segundos ingresando la placa, el kilómetro actual y calculando automáticamente el kilómetro próximo de retorno.</p>
             </div>
-
             <div class="module-card">
-                <h3>Consulta por Placa</h3>
-                <p>Revisa de inmediato el historial del vehículo: qué tipo de aceite usó la última vez y su kilometraje[cite: 2].</p>
+                <h3>Descuento Automático de Stock</h3>
+                <p>Cada salida en mostrador descuenta de forma limpia y directa en bodega, manteniendo tus números reales sin esfuerzo.</p>
             </div>
-
             <div class="module-card">
-                <h3>Clientes y Proveedores</h3>
-                <p>Base de datos organizada para fidelizar compradores y llevar al día las cuentas con tus distribuidores[cite: 2].</p>
-            </div>
-
-            <div class="module-card">
-                <h3>Reportes y Utilidad Bruta</h3>
-                <p>Métricas financieras claras para conocer el rendimiento real y la rentabilidad de tu negocio[cite: 2].</p>
-            </div>
-
-            <div class="module-card">
-                <h3>Control de Usuarios</h3>
-                <p>Seguridad y permisos por operador para un control transparente de caja y turnos[cite: 2].</p>
+                <h3>Caja y Reportes Claros</h3>
+                <p>Cuadres de caja transparentes por turno, desglose de formas de pago y control absoluto de la utilidad de tu negocio.</p>
             </div>
         </div>
 
         <div class="cta-box">
-            <h2>¿Listo para optimizar tu taller desde Quevedo?</h2>
-            <p>Adquiere un software desarrollado localmente con experiencia real en el mercado. Escríbenos directamente para más detalles.</p>
-            <!-- Reemplaza el número con tu WhatsApp -->
-            <a href="https://wa.me/593900000000?text=Hola,%20estoy%20interesado%20en%20el%20software%20para%20lubricadoras" class="cta-btn" target="_blank">Contactar por WhatsApp</a>
+            <h2>Prueba la solidez del sistema en tu taller</h2>
+            <p>Instalación local en Quevedo y soporte directo sin intermediarios.</p>
+            <a href="https://wa.me/593900000000?text=Hola,%20quiero%20ver%20el%20sistema%20en%20accion" class="cta-btn" target="_blank">Hablar por WhatsApp</a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 - Software de Gestión para Lubricadoras y Tecnicentros • Quevedo, Ecuador.</p>
+        <p>&copy; 2026 - Iliosoft Tecnicentro • Diseñado para talleres en Ecuador.</p>
     </footer>
 
 </body>
